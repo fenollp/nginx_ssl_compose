@@ -1,0 +1,13 @@
+pages:
+  image: ${nginx_image}
+  container_name: pages
+  ports:
+    - "${docker_http_port}:80"
+    - "${docker_https_port}:443"
+  volumes:
+    - ./nginx_ssl.conf:/etc/nginx/nginx.conf:ro
+    - ${docker_ssl_cert}:/ssl.cert:ro
+    - ${docker_ssl_key}:/ssl.key:ro
+    - ${docker_ssl_dh}:/param.pem:ro
+    - ${docker_static_pages_root}:/var/www:ro
+  command: /bin/bash -c "ls -1 /var/www && touch /var/log/nginx/error.log /var/log/nginx/access.log && { tail --follow --retry /var/log/nginx/*.log & } && nginx -g 'daemon off;'"
