@@ -4,6 +4,8 @@ GitHub/BitBucket/GitLab Pages with your own SSL certificates.
 
 Serve static files fast with, [nginx](nginx), HTTPS & multiple hosts.
 
+Gets an A+ on [SSLlabs' test](https://www.ssllabs.com/ssltest/index.html)
+
 Take a look at the Makefile (it's short).
 
 ``` shell
