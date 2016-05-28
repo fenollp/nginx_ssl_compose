@@ -38,11 +38,11 @@ There's `make-ssl-cert generate-default-snakeoil`.
 I recommend Let's Encrypt:
 
 ``` shell
-$ git clone https://github.com/letsencrypt/letsencrypt letsencrypt.git
-$ cd letsencrypt.git
-$ sudo -H ./letsencrypt-auto -v  # Updates packages, installs things, for fresh LE clones only
-$ ./letsencrypt-auto certonly --standalone --email ${your_email} -d ${name1} -d ${name2}
-$ letsencrypt-auto renew  # Run this every week: LE's certs expire after 90 days
+git clone https://github.com/letsencrypt/letsencrypt letsencrypt.git
+cd letsencrypt.git
+sudo -H ./letsencrypt-auto -v  # Updates packages, installs things, for fresh LE clones only
+./letsencrypt-auto certonly --standalone --email ${your_email} -d ${name1} -d ${name2}
+letsencrypt-auto renew  # Run this every week: LE's certs expire after 90 days
 ```
 
 * `${your_email}`: MUST be present, will be used to contact you for security issues (e.g.: `pierrefenoll@gmail.com`
