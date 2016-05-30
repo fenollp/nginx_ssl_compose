@@ -6,6 +6,8 @@ Serve static files fast with, [nginx](nginx), HTTPS & multiple hosts.
 
 Gets an A+ on [SSLlabs' test](https://www.ssllabs.com/ssltest/index.html)
 
+Note: once started, the served folders' contents are still editable.
+
 Take a look at the Makefile (it's short).
 
 ``` shell
