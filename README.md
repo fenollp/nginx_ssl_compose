@@ -59,6 +59,13 @@ $ sudo ls /etc/letsencrypt/live/dev.erldocs.com
 cert.pem  chain.pem  fullchain.pem  privkey.pem
 ```
 
+See for which domains the certificate was created:
+
+``` shell
+$ sudo -H keytool -printcert -file /etc/letsencrypt/live/dev.erldocs.com/fullchain.pem | grep DNSName
+  DNSName: dev.erldocs.com
+  DNSName: erldocs.com
+```
 
 ## License
 
