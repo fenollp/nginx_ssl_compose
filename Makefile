@@ -6,7 +6,7 @@
 ##   E.g:  $docker_static_pages_root/dev.erldocs.com
 ##         $docker_static_pages_root/erldocs.com
 ##         $docker_static_pages_root/other.erldocs.com
-export docker_static_pages_root ?= ~/wefwefwef/docs/sites
+export docker_static_pages_root ?= ~/www
 
 export docker_http_port  ?= 80
 export docker_https_port ?= 443
