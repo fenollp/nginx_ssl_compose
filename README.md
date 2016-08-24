@@ -67,6 +67,18 @@ $ sudo -H keytool -printcert -file /etc/letsencrypt/live/dev.erldocs.com/fullcha
   DNSName: erldocs.com
 ```
 
+And after 3 months, renew your certs (as root):
+
+``` shell
+./letsencrypt-auto renew --dry-run
+```
+
+Alternatively set up a crontab (note creating certs is rate-limited):
+
+``` shell
+@weekly root  /bin/bash -c 'cd ~/letsencrypt.git && ./letsencrypt-auto renew'
+```
+
 ## License
 
 This is inspired from https://github.com/jchaney/owncloud
