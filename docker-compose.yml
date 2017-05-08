@@ -12,3 +12,9 @@ pages:
     - ${docker_static_pages_root}:/var/www:ro
   command: /bin/bash -c "ls -1 /var/www && touch /var/log/nginx/error.log /var/log/nginx/access.log && { tail --follow --retry /var/log/nginx/*.log & } && nginx -g 'daemon off;'"
   restart: always
+  links:
+    - erldocs.com
+
+erldocs.com:
+  container_name: erldocs.com
+  image: fenollp/erldocs.com
